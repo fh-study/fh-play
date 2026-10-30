@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="at.ac.hcw.fhplay.controller.MainController">
+
+    <!-- Seitenleiste: Navigation & Playlists -->
+    <left>
+        <VBox styleClass="sidebar" spacing="8" prefWidth="200">
+            <padding><Insets top="16" right="12" bottom="16" left="12"/></padding>
+            <Label text="fh-play" styleClass="logo"/>
+            <Button text="Bibliothek" maxWidth="Infinity" styleClass="nav-button"/>
+            <Separator/>
+            <Label text="Playlists" styleClass="section-title"/>
+            <ListView fx:id="playlistList" VBox.vgrow="ALWAYS"/>
+        </VBox>
+    </left>
+
+    <!-- Titelliste -->
+    <center>
+        <TableView fx:id="songTable">
+            <placeholder>
+                <Label text="Noch keine Musik importiert"/>
+            </placeholder>
+            <columns>
+                <TableColumn fx:id="titleColumn" text="Titel" prefWidth="260"/>
+                <TableColumn fx:id="artistColumn" text="Künstler" prefWidth="180"/>
+                <TableColumn fx:id="albumColumn" text="Album" prefWidth="180"/>
+                <TableColumn fx:id="durationColumn" text="Dauer" prefWidth="70"/>
+            </columns>
+        </TableView>
+    </center>
+
+    <!-- Now-Playing-Leiste mit Steuerung -->
+    <bottom>
+        <HBox styleClass="player-bar" spacing="12" alignment="CENTER_LEFT">
+            <padding><Insets top="10" right="16" bottom="10" left="16"/></padding>
+            <Label fx:id="nowPlayingLabel" prefWidth="220"/>
+            <Button text="⏮"/>
+            <Button text="▶"/>
+            <Button text="⏭"/>
+            <Slider fx:id="progressSlider" HBox.hgrow="ALWAYS"/>
+            <Slider fx:id="volumeSlider" value="80" prefWidth="100"/>
+        </HBox>
+    </bottom>
+</BorderPane>
