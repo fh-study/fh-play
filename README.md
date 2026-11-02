@@ -60,7 +60,9 @@ src/test/java/…            JUnit-Tests
 4. Pull Request gegen `main` öffnen, im Text `Closes #5` schreiben → Ticket auf *Review*.
 5. Mindestens eine andere Person reviewt und testet → *Test* → Merge → *Done*.
 
-**Testmusik:** Lege lokale MP3s in einen Ordner `music/` im Projekt. Der Ordner wird
-nicht committet (siehe `.gitignore`), damit keine urheberrechtlich geschützten Dateien im Repo landen.
-Lizenzfreie Musik gibt es z. B. bei [Free Music Archive](https://freemusicarchive.org/)
-oder [Pixabay Music](https://pixabay.com/music/).
+**Testmusik:** Musikdateien kommen **nie** ins Repo (Lizenzen). Jede Person legt sich
+lokal einen Ordner `music/` im Projekt-Root an und kopiert dort ein paar Songs hinein,
+z. B. lizenzfreie Musik von [Pixabay Music](https://pixabay.com/music/) oder
+[Free Music Archive](https://freemusicarchive.org/). Der Ordner und alle Audiodateien
+(`.mp3`, `.wav`, `.flac`, `.m4a`, `.ogg`) sind in der `.gitignore`. In der App wählt man
+`music/` einfach beim Import aus.

@@ -43,5 +43,9 @@ bin/
 ### fh-play ###
 # Lokale Testmusik nicht committen
 /music/
+# Musikdateien nie committen (Lizenzen!)
 *.mp3
-!src/test/resources/**/*.mp3
+*.wav
+*.flac
+*.m4a
+*.ogg
